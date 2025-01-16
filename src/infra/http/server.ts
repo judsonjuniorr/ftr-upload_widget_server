@@ -11,6 +11,7 @@ import {
   serializerCompiler,
   validatorCompiler,
 } from 'fastify-type-provider-zod'
+import { getUploadsRoute } from './routes/get-uploads'
 
 const server = fastify()
 
@@ -46,6 +47,7 @@ server.register(fastifySwaggerUi, {
 })
 
 server.register(uploadImageRoute)
+server.register(getUploadsRoute)
 
 server.listen({ port: env.PORT, host: '0.0.0.0' }).then(() => {
   console.log(`HTTP Server running on ${env.PORT}!`)
