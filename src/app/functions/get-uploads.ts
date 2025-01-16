@@ -27,7 +27,7 @@ type GetUploadsOutput = {
 }
 
 export async function getUploads(
-  input: GetUploadsInput
+  input?: GetUploadsInput
 ): Promise<Either<never, GetUploadsOutput>> {
   const { searchQuery, sortBy, sortDirection, page, pageSize } =
     getUploadsInput.parse(input)
