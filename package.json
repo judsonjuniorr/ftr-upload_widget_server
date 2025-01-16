@@ -26,6 +26,7 @@
     "@fastify/multipart": "^9.0.2",
     "@fastify/swagger": "^9.4.1",
     "@fastify/swagger-ui": "^5.2.1",
+    "csv-stringify": "^6.5.2",
     "dayjs": "^1.11.13",
     "dotenv-cli": "^8.0.0",
     "drizzle-orm": "^0.38.3",
