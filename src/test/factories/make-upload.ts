@@ -6,7 +6,7 @@ import type { InferInsertModel } from 'drizzle-orm'
 export async function makeUpload(
   overrides?: Partial<InferInsertModel<typeof schema.uploads>>
 ) {
-  const fileName = `${faker.system.fileName()}.jpg`
+  const fileName = `${faker.system.fileName({ extensionCount: 0 })}.jpg`
 
   const result = await db
     .insert(schema.uploads)
